@@ -13,15 +13,15 @@ class HomeController extends Controller
 
     public function about(): View
     {
-        $title = "About us - Online Store";
-        $subtitle = "About us";
-        $description = "This is an about page ...";
-        $author = "Developed by: Daniel Correa 2.0";
+        $title = 'About us - Online Store';
+        $subtitle = 'About us';
+        $description = 'This is an about page ...';
+        $author = 'Developed by: Daniel Correa 2.0';
 
-        return view('home.about')->with("title", $title)
-            ->with("subtitle", $subtitle)
-            ->with("description", $description)
-            ->with("author", $author);
+        return view('home.about')->with('title', $title)
+            ->with('subtitle', $subtitle)
+            ->with('description', $description)
+            ->with('author', $author);
     }
 
     public function contact(): View

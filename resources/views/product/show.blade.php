@@ -17,8 +17,12 @@
                 @else
                 <h5 class="card-title">{{ $viewData["product"]["name"] }}</h5>
                 @endif
-                <p class="card-text">{{ $viewData["product"]["description"] }}</p>
                 <p class="card-text">Price: ${{ number_format($viewData["product"]["price"], 0, '.', ',') }}</p>
+
+                @foreach ($viewData["product"]->comments as $comment)
+                    - {{ $comment->getDescription() }} <br />
+                @endforeach
+
             </div>
         </div>
     </div>
